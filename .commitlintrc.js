@@ -6,7 +6,7 @@ module.exports = {
     {
       rules: {
         "task-prefix": ({ raw }) => {
-          const regexp = /^EBZ-\d+: \s*[А-Яа-яЁё]+(?:ть|ти|чь)\b .+/i
+          const regexp = /^EBZ-\d+:\s*[А-Яа-яЁё]+(?:ть|ти|чь)(?=\s|$).+/i
 
           return regexp.test(raw)
             ? [true, ""]
